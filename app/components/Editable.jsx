@@ -1,13 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
 
-// const Editable = ({editing, value, onEdit}) => {
-// 	if(editing){
-// 		return <Editable.Edit value={value} onEdit={onEdit} />;
-// 	}
-// 	return <Editable.Value value={value} />;
-// }
-
 export default ({editing, value, onEdit, className, ...props}) => {
   if(editing) {
     return <Edit
@@ -24,7 +17,7 @@ export default ({editing, value, onEdit, className, ...props}) => {
 
 class Edit extends React.Component {
   render() {
-    const {className, onEdit, value, ...props} = this.props;
+    const {className, value, onEdit, ...props} = this.props;
 
     return <input
       type="text"
